@@ -37,7 +37,7 @@ colorized_echo() {
     esac
 }
 
-FETCH_REPO="Gozargah/Marzban-scripts"
+FETCH_REPO="nekroshh/Marzban-scripts"
 SCRIPT_URL="https://github.com/$FETCH_REPO/raw/master/marzban.sh"
 colorized_echo blue "Installing marzban script"
 curl -sSL $SCRIPT_URL | install -m 755 /dev/stdin /usr/local/bin/marzban
