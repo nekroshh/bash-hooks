@@ -39,9 +39,14 @@ colorized_echo() {
 
 FETCH_REPO="nekroshh/Marzban-scripts"
 SCRIPT_URL="https://github.com/$FETCH_REPO/raw/master/marzban.sh"
-colorized_echo blue "Installing marzban script"
-curl -sSL $SCRIPT_URL | install -m 755 /dev/stdin /usr/local/bin/marzban
-colorized_echo green "marzban script installed successfully"
+
+colorized_echo blue "Downloading marzban script"
+curl -sSLO "$SCRIPT_URL"
+
+chmod +x marzban.sh
+colorized_echo blue "Running marzban script with 'install' parameter"
+./marzban.sh install
+
 
 colorized_echo blue "Installing Docker"
 curl -fsSL https://get.docker.com | sh
